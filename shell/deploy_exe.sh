@@ -25,6 +25,8 @@
 
 	#检查本机是否安装logstash
 	check_if_install_logstash $FILEPATH
+	#检查hosts文件
+	check_if_exist_hosts $HOSTS
 
 for hostname in `cat HOSTS`
 do

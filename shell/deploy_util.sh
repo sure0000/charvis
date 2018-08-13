@@ -8,11 +8,16 @@ check_if_exist_hosts(){
 	if [ ! -f $hosts ]
 	then 
 		echo please create your hosts file
+		exit
 	else
-		if cat $hosts | grep "input" > /dev/null
-		then 
-			
-
+		echo please confirm your hosts file,press y to continue others to quit...
+		cat hosts
+		read command
+		if [ command -ne "y"]
+		then
+			quit
+		fi
+	fi		
 }
 
 check_if_install_logstash(){
