@@ -1,0 +1,7 @@
+- type: log
+  enabled: true
+  paths:
+    - /var/log/cloudera-scm-agent/cloudera-scm-agent.log
+  fields:
+    "log_topic": "CM"
+    "tag": "cloudera-scm-agent-xyc"

@@ -2,6 +2,7 @@
 
 
 filebeat input
+cloudera1
 ```yml
 - type: log
   enabled: true
@@ -27,6 +28,7 @@ filebeat input
 ```
 
 logstash output
+cloudera1
 
 ```
 output{

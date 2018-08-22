@@ -39,7 +39,7 @@ check_if_install_filebeat(){
 		curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.3.2-x86_64.rpm;
 		rpm -ivh filebeat-6.3.2-x86_64.rpm;
 		mkdir /etc/filebeat/configs;
-		filebeat -e -c /etc/filebeat/filebeat.yml -d 'publish' 2>&1 >filebeat.log &;
+		filebeat -e -c /etc/filebeat/filebeat.yml -d 'publish' >filebeat.log 2>&1 &;
 	fi;
 	scp root@cloudera1:/etc/filebeat/filebeat.yml root@${hostname}:/etc/filebeat/;
 	"
