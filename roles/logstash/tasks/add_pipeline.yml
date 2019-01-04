@@ -1,0 +1,23 @@
+---
+- hosts: logstash
+  remote_user: root
+  tasks:
+  - name: copy pipeline.yml to host
+    copy: 
+      src: ../logstash_conf/es2-pipelines.yml
+      dest: /etc/logstash/pipelines.yml
+      owner: root
+      group: root
+      backup: yes
+      mode: 777
+  
+  - name: copy pipeline conf to host
+    copy:
+      src: ../pipeline_conf/{{pipeline_path}}
+      dest: /etc/logstash/conf.d/
+      owner: root
+      group: root
+      backup: yes
+      mode: 777
+
+

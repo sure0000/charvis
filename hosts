@@ -1,0 +1,4 @@
+[logstash]
+es1 ansible_ssh_host=10.1.3.123
+es2 ansible_ssh_host=10.1.3.124
+es3 ansible_ssh_host=10.1.3.125
