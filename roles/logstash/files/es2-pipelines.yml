@@ -5,7 +5,7 @@
 
  - pipeline.id: rules_engine_t_rule_flow_instance_test
    pipeline.workers: 2
-   pipeline.batch.size: 100
+   pipeline.batch.size: 1000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance_test.conf"
  
  - pipeline.id: rules_engine_t_rule_flow_element_instance_test

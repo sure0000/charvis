@@ -1,4 +1,4 @@
 ---
 
 - name: create a file
-  shell: touch /data0/xyc/ansible.txt
+  shell: touch /data0/{{ dir }}/ansible2.txt

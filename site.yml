@@ -12,9 +12,9 @@
     - setup:
   tags: always
 
-- name: test
-  hosts: logstash
+- name: main
+  hosts: "{{group_server}}"
   remote_user: root
   gather_facts: false
   roles:
-    - logstash
+    - "{{ rolename }}"
