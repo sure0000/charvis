@@ -65,7 +65,7 @@
 
  - pipeline.id: hdfs
    pipeline.workers: 1
-   pipeline.batch.size: 100
+   pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/hdfs_pipeline.conf"
 
  - pipeline.id: hbase

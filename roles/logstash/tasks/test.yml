@@ -1,0 +1,4 @@
+---
+
+- name: create a file
+  shell: touch /data0/xyc/ansible.txt
