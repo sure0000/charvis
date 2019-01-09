@@ -1,12 +1,12 @@
 # List of pipelines to be loaded by Logstash 
  - pipeline.id: rules_engine_t_rule_flow_instance
-   pipeline.workers: 2
-   pipeline.batch.size: 100
+   pipeline.workers: 5
+   pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance.conf"
 
  - pipeline.id: rules_engine_t_rule_flow_element_instance
-   pipeline.workers: 2
-   pipeline.batch.size: 100
+   pipeline.workers: 3
+   pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_element_instance.conf"
 
  - pipeline.id: rules_engine_t_rule_flow_instance_parameter

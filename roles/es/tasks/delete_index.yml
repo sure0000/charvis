@@ -1,0 +1,5 @@
+---
+
+- name: execute batch_delete_index.sh in host
+  script: ../files/batch_delete_index.sh "{{ prefix_name }}" "{{ begin }}" "{{ end }}"
+  

@@ -1,35 +1,22 @@
 # Settings file in YAML
 # ------------ Data path ------------------
-
 path.data: /data0/logstash/data
-#
+
+# ------------ pipeline -------------------
+config.reload.automatic: true
 
 # ------------ Metrics Settings --------------
-#
-# Bind address for the metrics REST endpoint
-#
 http.host: "es1"
-#
-# Bind port for the metrics REST endpoint, this option also accept a range
-# (9600-9700) and logstash will pick up the first available ports.
-#
-# http.port: 9600-9700
-#
+
+# ------------ Dead-Letter Queue Settings --------------
+#dead_letter_queue.enable: true
+# Default is path.data/dead_letter_queue
+#path.dead_letter_queue: 
+
 # ------------ Debugging Settings --------------
-#
-# Options for log.level:
-#   * fatal
-#   * error
-#   * warn
-#   * info (default)
-#   * debug
-#   * trace
-#
-# log.level: info
 path.logs: /var/log/logstash
 #
 # ------------ X-Pack Settings (not applicable for OSS build)--------------
-#
 # X-Pack Monitoring
 # https://www.elastic.co/guide/en/logstash/current/monitoring-logstash.html
 xpack.monitoring.enabled: true
@@ -46,18 +33,4 @@ xpack.monitoring.elasticsearch.sniffing: true
 xpack.monitoring.collection.interval: 10s
 xpack.monitoring.collection.pipeline.details.enabled: true
 #
-# X-Pack Management
-# https://www.elastic.co/guide/en/logstash/current/logstash-centralized-pipeline-management.html
-#ixpack.management.enabled: true
-#xpack.management.pipeline.id: ["rules_engine.t_rule_flow_element_instance","rules_engine_t_rule_flow_instance","rules_engine_t_rule_flow_instance_parameter"]
-#xpack.management.elasticsearch.username: elastic
-#xpack.management.elasticsearch.password: elastic
-#xpack.management.elasticsearch.url: ["http://es1:9200", "http://es2:9200","http://es3:9200"]
-#xpack.management.elasticsearch.ssl.ca: [ "/path/to/ca.crt" ]
-#xpack.management.elasticsearch.ssl.truststore.path: /path/to/file
-#xpack.management.elasticsearch.ssl.truststore.password: password
-#xpack.management.elasticsearch.ssl.keystore.path: /path/to/file
-#xpack.management.elasticsearch.ssl.keystore.password: password
-#xpack.management.elasticsearch.ssl.verification_mode: certificate
-#xpack.management.elasticsearch.sniffing: false
-#xpack.management.logstash.poll_interval: 5s
+

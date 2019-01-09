@@ -7,7 +7,7 @@
     owner: root
     group: root
     backup: yes
-    mode: 777
+    mode: 0777
     
   
 - name: copy pipeline conf to host
@@ -17,7 +17,7 @@
     owner: root
     group: root
     backup: yes
-    mode: 777
+    mode: 0777
     
 
 
