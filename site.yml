@@ -17,4 +17,4 @@
   remote_user: root
   gather_facts: false
   roles:
-    - "{{ rolename }}"
+    - "{{ role_name }}"

@@ -1,8 +1,56 @@
-
+## 反欺诈
  - pipeline.id: antifraud.atf_car_config
    pipeline.workers: 2
    pipeline.batch.size: 1000
    path.config: "/etc/logstash/conf.d/antifraud.atf_car_config.conf" 
+
+ - pipeline.id: antifraud.atf_car_config_test
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/antifraud.atf_car_config_test.conf"
+ 
+
+## ELK组件日志
+ - pipeline.id: walle
+   pipeline.workers: 2
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/walle_pipeline.conf"
+
+ - pipeline.id: logstash
+   pipeline.workers: 2
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/logstash_pipeline.conf"
+
+ - pipeline.id: es
+   pipeline.workers: 2
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/es_pipeline.conf"
+
+## 规则引擎
+ - pipeline.id: rulesplatformtest-rules-engine.t_process_routing_instance
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_process_routing_instance.conf"
+
+ - pipeline.id: rulesplatformtest-rules-engine.t_process_rule_instance
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_process_rule_instance.conf"
+
+ - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_element_instance
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_element_instance.conf"
+
+ - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_instance_parameter
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_instance_parameter.conf"
+
+ - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_instance
+   pipeline.workers: 1
+   pipeline.batch.size: 100
+   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_instance.conf"
 
  - pipeline.id: rules_engine_t_rule_flow_instance_parameter_test
    pipeline.workers: 2
@@ -19,16 +67,8 @@
    pipeline.batch.size: 100
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_element_instance_test.conf"
 
- - pipeline.id: walle
-   pipeline.workers: 2
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/walle_pipeline.conf"
-
- - pipeline.id: logstash
-   pipeline.workers: 2
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/logstash_pipeline.conf"
-
+ 
+## 大数据组件日志
  - pipeline.id: pipelinedb
    pipeline.workers: 1
    pipeline.batch.size: 1
@@ -59,7 +99,6 @@
    pipeline.batch.size: 100
    path.config: "/etc/logstash/conf.d/hive_pipeline.conf"
 
- 
  - pipeline.id: zookeeper
    pipeline.workers: 1
    pipeline.batch.size: 100
@@ -89,33 +128,3 @@
    pipeline.workers: 1
    pipeline.batch.size: 100
    path.config: "/etc/logstash/conf.d/cm_pipeline.conf"
-
- - pipeline.id: rulesplatformtest-rules-engine.t_process_routing_instance
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_process_routing_instance.conf"
-
- - pipeline.id: rulesplatformtest-rules-engine.t_process_rule_instance
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_process_rule_instance.conf"
-
- - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_element_instance
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_element_instance.conf"
-
- - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_instance_parameter
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_instance_parameter.conf"
-
- - pipeline.id: rulesplatformtest-rules-engine.t_rule_flow_instance
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/rulesplatformtest-rules-engine.t_rule_flow_instance.conf"
-
- - pipeline.id: antifraud.atf_car_config_test
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_config_test.conf"
