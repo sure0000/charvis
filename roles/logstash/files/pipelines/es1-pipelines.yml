@@ -1,4 +1,4 @@
-# List of pipelines to be loaded by Logstash 
+# 规则引擎
  - pipeline.id: rules_engine_t_rule_flow_instance
    pipeline.workers: 5
    pipeline.batch.size: 2000
@@ -13,5 +13,16 @@
    pipeline.workers: 8
    pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance_parameter.conf"
+
+ - pipeline.id: rules-engine_t_process_routing_instance_test
+   pipeline.workers: 1
+   pipeline.batch.size: 2000
+   path.config: "/etc/logstash/conf.d/rules-engine.t_process_routing_instance_test.conf"
  
- 
+ # acrm
+ - pipeline.id: acrm-usercenter-v1
+   pipeline.workers: 2
+   pipeline.batch.size: 2000
+   path.config: "/etc/logstash/conf.d/acrm-usercenter.conf"
+
+

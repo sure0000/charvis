@@ -1,13 +1,19 @@
-## 反欺诈
- - pipeline.id: antifraud.atf_car_config
+#acrm
+ - pipeline.id: acrm-evenfunnelrecode-v1
    pipeline.workers: 2
-   pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_config.conf" 
+   pipeline.batch.size: 2000
+   path.config: "/etc/logstash/conf.d/acrm-evenfunnelrecode-v1.conf"
 
- - pipeline.id: antifraud.atf_car_config_test
-   pipeline.workers: 1
-   pipeline.batch.size: 100
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_config_test.conf"
+## 反欺诈
+#  - pipeline.id: antifraud.atf_car_config
+#    pipeline.workers: 2
+#    pipeline.batch.size: 1000
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_config.conf" 
+
+#  - pipeline.id: antifraud.atf_car_config_test
+#    pipeline.workers: 1
+#    pipeline.batch.size: 100
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_config_test.conf"
  
 
 ## ELK组件日志

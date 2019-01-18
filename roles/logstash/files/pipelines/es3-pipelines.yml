@@ -1,36 +1,47 @@
- - pipeline.id: antifraud.atf_car_price
-   pipeline.workers: 2
-   pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_price.conf"
+ #反欺诈
+#  - pipeline.id: antifraud.atf_car_price
+#    pipeline.workers: 2
+#    pipeline.batch.size: 1000
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_price.conf"
 
- - pipeline.id: antifraud.atf_car_keep_percent
-   pipeline.workers: 2
-   pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_keep_percent.conf"
+#  - pipeline.id: antifraud.atf_car_keep_percent
+#    pipeline.workers: 2
+#    pipeline.batch.size: 1000
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_keep_percent.conf"
  
- - pipeline.id: antifraud.atf_car_price_test 
-   pipeline.workers: 2
-   pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_price_test.conf"
+#  - pipeline.id: antifraud.atf_car_price_test 
+#    pipeline.workers: 2
+#    pipeline.batch.size: 1000
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_price_test.conf"
 
- - pipeline.id: antifraud.atf_car_keep_percent_test
-   pipeline.workers: 2
-   pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/antifraud.atf_car_keep_percent_test.conf"
+#  - pipeline.id: antifraud.atf_car_keep_percent_test
+#    pipeline.workers: 2
+#    pipeline.batch.size: 1000
+#    path.config: "/etc/logstash/conf.d/antifraud.atf_car_keep_percent_test.conf"
  
  - pipeline.id: rules_engine_t_rule_flow_instance
-   pipeline.workers: 5
+   pipeline.workers: 1
    pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance.conf"
 
  - pipeline.id: rules_engine_t_rule_flow_element_instance
-   pipeline.workers: 3
+   pipeline.workers: 1
    pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_element_instance.conf"
 
  - pipeline.id: rules_engine_t_rule_flow_instance_parameter
-   pipeline.workers: 8
+   pipeline.workers: 2
    pipeline.batch.size: 2000
    path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance_parameter.conf"
+
+ - pipeline.id: rules-engine_t_process_rule_instance_test
+   pipeline.workers: 1
+   pipeline.batch.size: 2000
+   path.config: "/etc/logstash/conf.d/rules-engine.t_process_rule_instance_test.conf"
+# acrm
+ - pipeline.id: acrm-usereventrecord-new-v1
+   pipeline.workers: 2
+   pipeline.batch.size: 2000
+   path.config: "/etc/logstash/conf.d/acrm-usereventrecord-new-v1.conf"
 
 
