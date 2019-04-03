@@ -19,20 +19,30 @@
 #    pipeline.batch.size: 1000
 #    path.config: "/etc/logstash/conf.d/antifraud.atf_car_keep_percent_test.conf"
  
- - pipeline.id: rules_engine_t_rule_flow_instance
+ - pipeline.id: ruleengine_t_rule_flow_element_instance_j
    pipeline.workers: 1
    pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance.conf"
+   path.config: "/etc/logstash/conf.d/ruleengine_t_rule_flow_element_instance_j.conf"
 
- - pipeline.id: rules_engine_t_rule_flow_element_instance
+ - pipeline.id: ruleengine_t_rule_flow_instance_parameter_j
    pipeline.workers: 1
    pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_element_instance.conf"
+   path.config: "/etc/logstash/conf.d/ruleengine_t_rule_flow_instance_parameter_j.conf"
 
- - pipeline.id: rules_engine_t_rule_flow_instance_parameter
+ - pipeline.id: ruleengine_t_rule_flow_instance_j
    pipeline.workers: 1
    pipeline.batch.size: 1000
-   path.config: "/etc/logstash/conf.d/rules_engine_t_rule_flow_instance_parameter.conf"
+   path.config: "/etc/logstash/conf.d/ruleengine_t_rule_flow_instance_j.conf"
+
+ - pipeline.id: ruleengine_t_process_routing_instance_j
+   pipeline.workers: 1
+   pipeline.batch.size: 1000
+   path.config: "/etc/logstash/conf.d/ruleengine_t_process_routing_instance_j.conf"
+
+ - pipeline.id: ruleengine_t_process_rule_instance_j
+   pipeline.workers: 1
+   pipeline.batch.size: 1000
+   path.config: "/etc/logstash/conf.d/ruleengine_t_process_rule_instance_j.conf"
 
  - pipeline.id: rules-engine_t_process_rule_instance_test
    pipeline.workers: 1
