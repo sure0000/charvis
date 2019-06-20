@@ -6,7 +6,7 @@ path.data: /data0/logstash/data
 config.reload.automatic: true
 
 # ------------ Metrics Settings --------------
-http.host: "es1"
+http.host: "127.0.0.1"
 
 # ------------ Dead-Letter Queue Settings --------------
 #dead_letter_queue.enable: true
@@ -34,3 +34,10 @@ xpack.monitoring.collection.interval: 10s
 xpack.monitoring.collection.pipeline.details.enabled: true
 #
 
+# X-Pack Management
+# https://www.elastic.co/guide/en/logstash/current/logstash-centralized-pipeline-management.html
+xpack.management.enabled: true
+xpack.management.pipeline.id: ["log_logstash","mysqlToES","log_tidb","log_tikv","log_tidbServer","kafkaTokafka","log_es","log_kafka","log_metric_connect"]
+xpack.management.elasticsearch.username: elastic
+xpack.management.elasticsearch.password: elastic
+xpack.management.elasticsearch.url: ["http://172.17.100.21:9200", "http://172.17.100.22:9200","http://172.17.100.23:9200"]

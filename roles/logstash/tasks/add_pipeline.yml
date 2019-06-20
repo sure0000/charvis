@@ -1,23 +1,18 @@
 ---
 
-- name: copy pipeline.yml to host
+- name: copy logstash.yml to /etc/logstash/
   copy: 
-    src: "{{pipeline_yml}}"
-    dest: /etc/logstash/pipelines.yml
+    src: logstash.yml
+    dest: /etc/logstash/
     owner: root
     group: root
     backup: yes
-    mode: 0777
+    mode: 01777
     
   
-- name: copy pipeline conf to host
-  copy:
-    src: "{{pipeline_conf_name}}"
-    dest: /etc/logstash/conf.d/
-    owner: root
-    group: root
-    backup: yes
-    mode: 0777
-    
+- name: restart logstash
+  service:
+    name: logstash
+    state: restarted
 
 

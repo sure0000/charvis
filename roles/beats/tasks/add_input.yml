@@ -2,9 +2,9 @@
 
 - name: copy input config to /etc/filebeat/configs/
   copy:
-    src: connect.yml
+    src: "{{ filename }}"
     dest: /etc/filebeat/configs/
     owner: root
     group: root
     backup: yes
-    mode: 0777
+    mode: 01777

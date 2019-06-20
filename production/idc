@@ -6,3 +6,8 @@ es3 ansible_ssh_host=172.17.100.23  ansible_user=root
 [sink_connect_metric]
 xsdebezium2 ansible_ssh_host=172.17.100.20  ansible_user=root
 xshadoop13  ansible_ssh_host=172.17.200.21  ansible_user=root
+
+[logstash]
+es1 ansible_ssh_host=172.17.100.21  ansible_user=root
+es2 ansible_ssh_host=172.17.100.22  ansible_user=root
+es3 ansible_ssh_host=172.17.100.23  ansible_user=root
