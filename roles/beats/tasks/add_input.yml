@@ -1,0 +1,10 @@
+---
+
+- name: copy input config to /etc/filebeat/configs/
+  copy:
+    src: connect.yml
+    dest: /etc/filebeat/configs/
+    owner: root
+    group: root
+    backup: yes
+    mode: 0777

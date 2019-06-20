@@ -13,7 +13,7 @@
   tags: always
 
 - name: main
-  hosts: "{{group_server}}"
+  hosts: all
   remote_user: root
   gather_facts: false
   roles:

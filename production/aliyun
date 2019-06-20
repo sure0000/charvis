@@ -1,0 +1,5 @@
+[test]
+cdh1    ansible_ssh_host=10.1.3.116
+cdh2    ansible_ssh_host=10.1.3.117      
+cdh3    ansible_ssh_host=10.1.3.118      
+cdh4    ansible_ssh_host=10.1.2.213      

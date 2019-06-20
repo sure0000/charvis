@@ -1,18 +1,23 @@
 ---
-- name: download rpm to target dir
-  shell: cd /usr/local && curl -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-x86_64.rpm
+- name: download filebeat-6.5.4-x86_64.rpm to /usr/local/src/ 
+  shell: cd /usr/local/src && curl -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.5.4-x86_64.rpm
 
-- name: install filebeat
-  shell: rpm -ivh /usr/local/filebeat-6.5.4-x86_64.rpm
+- name: install filebeat-6.5.4-x86_64.rpm
+  shell: rpm -ivh /usr/local/src/filebeat-6.5.4-x86_64.rpm
 
-- name: create configs dir
+- name: create dir 
   shell: mkdir /etc/filebeat/configs
 
-- name: copy filebeat.yml to hosts
+- name: copy filebeat.yml to host
   vars:
     hostname: "{{ ansible_facts['nodename'] }}"
   template:
     src: filebeat.yml.j2
     dest: /etc/filebeat/filebeat.yml
     backup: yes
+
+- name: start filebeat
+  service:
+    name: filebeat
+    state: started
     
