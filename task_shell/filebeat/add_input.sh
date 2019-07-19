@@ -7,10 +7,10 @@
 # @filename     input 文件名
 
 hosts="../../production"
-host_group="logstash"
+host_group="pgsql11"
 role_name="beats"
 task_name="add_input"
-filename="log_logstash.yml"
+filename="log_pgsql11.yml"
 
 # 执行脚本
 ansible-playbook -i ${hosts} --limit ${host_group} ../../site.yml -e "role_name=${role_name}" -e "action_task=${task_name}" -e "filename=${filename}"

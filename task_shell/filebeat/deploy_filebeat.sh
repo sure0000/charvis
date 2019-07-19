@@ -9,7 +9,7 @@
 role_name="beats"              
 task_name="deploy_filebeat"    
 hosts_path="../../production"   
-host_group="sink_connect_metric"           # 最经常修改
+host_group="pgsql11"           # 最经常修改
 
 # ansible playbook 执行命令
 ansible-playbook -i ${hosts_path} --limit ${host_group} ../../site.yml -e "action_task=${task_name}" -e "role_name=${role_name}"

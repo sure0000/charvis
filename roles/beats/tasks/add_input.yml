@@ -7,4 +7,4 @@
     owner: root
     group: root
     backup: yes
-    mode: 01777
+    mode: 777

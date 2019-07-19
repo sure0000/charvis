@@ -7,7 +7,21 @@ es3 ansible_ssh_host=172.17.100.23  ansible_user=root
 xsdebezium2 ansible_ssh_host=172.17.100.20  ansible_user=root
 xshadoop13  ansible_ssh_host=172.17.200.21  ansible_user=root
 
+[pgsql11]
+xsdebezium1 ansible_ssh_host=172.16.100.13 ansible_user=root ansible_password=Dashu0701
+
 [logstash]
 es1 ansible_ssh_host=172.17.100.21  ansible_user=root
 es2 ansible_ssh_host=172.17.100.22  ansible_user=root
 es3 ansible_ssh_host=172.17.100.23  ansible_user=root
+
+[tidb]
+Tidb1 ansible_ssh_host=172.17.200.2 ansible_user=root
+Tidb2 ansible_ssh_host=172.17.200.3 ansible_user=root
+Tidb3 ansible_ssh_host=172.17.200.4 ansible_user=root
+
+[filebeat:children]
+es
+tidb
+
+

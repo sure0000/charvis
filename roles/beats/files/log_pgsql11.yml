@@ -1,0 +1,10 @@
+- type: log
+  enabled: true
+  multiline:
+        pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}'
+        negate: true
+        match: after
+  paths:
+    - /data0/pgsql11/log/*.log
+  fields:
+    "log_topic": "log_pgsql11"
